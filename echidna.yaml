@@ -1,5 +1,5 @@
 
-testMode: "assertion"
+testMode: "property"
 prefix: "crytic_"
 coverage: true
 corpusDir: "echidna"

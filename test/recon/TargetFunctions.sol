@@ -6,13 +6,32 @@ import {Properties} from "./Properties.sol";
 import {vm} from "@chimera/Hevm.sol";
 
 abstract contract TargetFunctions is BaseTargetFunctions, Properties {
-    function vault_requestDeposit(uint256 assets) public {
-        // clamp inputs to use the values from setup
-        vault.requestDeposit(assets, admin, admin);
+    function eRC7540Vault_mint(uint256 shares, address receiver) public {
+        vault.mint(shares, receiver);
     }
 
-    function vault_mint(uint256 shares) public {
-        vault.mint(shares, admin);
+    function eRC7540Vault_requestDeposit(
+        uint256 assets,
+        address controller,
+        address owner
+    ) public {
+        vault.requestDeposit(assets, controller, owner);
+    }
+
+    function eRC7540Vault_requestRedeem(
+        uint256 shares,
+        address controller,
+        address owner
+    ) public {
+        vault.requestRedeem(shares, controller, owner);
+    }
+
+    function eRC7540Vault_withdraw(
+        uint256 assets,
+        address receiver,
+        address controller
+    ) public {
+        vault.withdraw(assets, receiver, controller);
     }
 
     // NOTE: this is required for checks in properties to be valid, could have multiple actors in setup and switch between them
