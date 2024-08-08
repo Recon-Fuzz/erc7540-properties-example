@@ -6,10 +6,6 @@ import {Properties} from "./Properties.sol";
 import {vm} from "@chimera/Hevm.sol";
 
 abstract contract TargetFunctions is BaseTargetFunctions, Properties {
-    function eRC7540Vault_mint(uint256 shares, address receiver) public {
-        vault.mint(shares, receiver);
-    }
-
     function eRC7540Vault_requestDeposit(
         uint256 assets,
         address controller,
@@ -24,6 +20,10 @@ abstract contract TargetFunctions is BaseTargetFunctions, Properties {
         address owner
     ) public {
         vault.requestRedeem(shares, controller, owner);
+    }
+
+    function eRC7540Vault_deposit(uint256 assets, address receiver) public {
+        vault.deposit(assets, receiver);
     }
 
     function eRC7540Vault_withdraw(
