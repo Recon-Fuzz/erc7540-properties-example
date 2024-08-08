@@ -4,3 +4,6 @@
 [submodule "lib/chimera"]
 	path = lib/chimera
 	url = https://github.com/Recon-Fuzz/chimera
+[submodule "lib/erc7540-reusable-properties"]
+	path = lib/erc7540-reusable-properties
+	url = https://github.com/Recon-Fuzz/erc7540-reusable-properties
