@@ -26,5 +26,8 @@ abstract contract Setup is BaseSetup {
             admin,
             admin
         );
+
+        asset.mint(address(this), 10_000_000e18);
+        asset.approve(address(vault), type(uint256).max);
     }
 }
