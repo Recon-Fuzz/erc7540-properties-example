@@ -16,7 +16,7 @@ abstract contract Properties is
         bytes memory encoded = abi.encodeCall(this.erc7540_1, (address(vault)));
         bool asBool = _doTestAndReturnResult(encoded);
 
-        /// NOTE: define this as an assetion so it can be tested in assertion mode
+        /// NOTE: we define this as an assertion so it can be tested in assertion mode
         t(asBool, "erc7540_1");
 
         return asBool;
@@ -26,7 +26,7 @@ abstract contract Properties is
         bytes memory encoded = abi.encodeCall(this.erc7540_2, (address(vault)));
         bool asBool = _doTestAndReturnResult(encoded);
 
-        /// NOTE: define this as an assetion so it can be tested in assertion mode
+        /// NOTE: we define this as an assertion so it can be tested in assertion mode
         t(asBool, "erc7540_2");
 
         return asBool;
