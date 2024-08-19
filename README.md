@@ -19,3 +19,9 @@ To run Medusa use the following command:
 ```
 medusa fuzz
 ```
+
+## Example Run
+
+<img width="1506" alt="Screenshot 2024-08-19 at 11 35 49" src="https://github.com/user-attachments/assets/79766b3d-2a49-4730-a5ff-df73bd586ef9">
+
+https://getrecon.xyz/shares/07d00e40-bacc-4e91-a0ce-82a38fbc6ecb
